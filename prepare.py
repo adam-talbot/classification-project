@@ -9,6 +9,11 @@ def clean_telco(df):
     df.senior_citizen = np.where(df.senior_citizen == 1, 'Yes', 'No')
     return df
 
+def final_clean(df):
+    df.replace(to_replace='No internet service', value='No', inplace=True)
+    df.replace(to_replace='No phone service', value='No', inplace=True)
+    return df
+
 def dummy_and_split(df):
     cat_cols = df.select_dtypes(include='object').columns.tolist()
     dummy_df = pd.get_dummies(df[cat_cols], drop_first = True)
