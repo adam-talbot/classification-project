@@ -57,13 +57,13 @@ Will update this later
 
 #### Formal Hypotheses
 
-> - **Hypothesis 1 -**
+>  **Hypothesis 1 -**
 > - alpha = .05
 > - $H_0$: Sepal length is the same in virginica and versicolor. $\mu_{virginica} == \mu_{versicolor}$.  
 > - $H_a$: Sepal length significantly different in virginica and versicolor. $\mu_{virginica} != \mu_{versicolor}$. 
 > - Outcome: I rejected the Null Hypothesis; there is a difference in sepal length between the Virginica and Vericolor Species.
 
-> - **Hypothesis 2 -** 
+>  **Hypothesis 2 -** 
 > - alpha = .05
 > - $H_0$: Sepal width is the same in virginica and versicolor. $\mu_{virginica} == \mu_{versicolor}$.  
 > - $H_a$: Sepal width significantly different in virginica and versicolor. $\mu_{virginica} != \mu_{versicolor}$. 
@@ -89,7 +89,7 @@ Will update this later
 - [x] Create README.md with data dictionary, project and business goals, come up with initial hypotheses.
 - [x] Acquire data from the Codeup Database and create a function to automate this process. Save the function in an acquire.py file to import into the Final Report Notebook.
 - [x] Clean and prepare data for the first iteration through the pipeline, MVP preparation. Create a function to automate the process, store the function in a prepare.py module, and prepare data in Final Report Notebook by importing and using the funtion.
-- [x]  Clearly define two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, and document findings and takeaways.
+- [x] Clearly define two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, and document findings and takeaways.
 - [x] Establish a baseline accuracy and document well.
 - [x] Train three different classification models.
 - [x] Evaluate models on train and validate datasets.
