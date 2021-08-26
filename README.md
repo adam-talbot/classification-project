@@ -128,11 +128,11 @@ ___
 
 ##### Plan -> Acquire -> Prepare
 > - Store functions needed to prepare the iris data; make sure the module contains the necessary imports to run the code. The final function should do the following:
-> - Split the data into train/validate/test.
->> - Handle any missing values.
->> - Handle erroneous data and/or outliers that need addressing.
->> - Encode variables as needed.
->> - Create any new features, if made for this project.
+    > - Split the data into train/validate/test.
+    > - Handle any missing values.
+    > - Handle erroneous data and/or outliers that need addressing.
+    > - Encode variables as needed.
+    > - Create any new features, if made for this project.
 > - Import the prepare function from the prepare.py module and use it to prepare the data in the Final Report Notebook.
 ___
 
