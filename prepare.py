@@ -24,7 +24,7 @@ def split_telco(df):
     train, validate = train_test_split(train_validate, test_size=.25, random_state=123, stratify=train_validate.churn)
     return train, validate, test
 
-def dummy_and_split(df):
+def dummy_and_split_telco(df):
     cat_cols = df.select_dtypes(include='object').columns.tolist()
     dummy_df = pd.get_dummies(df[cat_cols], drop_first = True)
     df_w_dummies = pd.concat([df, dummy_df], axis=1)

@@ -103,6 +103,8 @@ def freq_table(train, cat_var):
         pd.DataFrame({cat_var: class_labels,
                       'Count': train[cat_var].value_counts(normalize=False), 
                       'Percent': round(train[cat_var].value_counts(normalize=True)*100,2)}
+#         pd.DataFrame({'Count': train[cat_var].value_counts(normalize=False), 
+#                       'Percent': round(train[cat_var].value_counts(normalize=True)*100,2)}        
                     )
     )
     return frequency_table
