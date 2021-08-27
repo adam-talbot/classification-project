@@ -217,7 +217,8 @@ def plot_all_continuous_vars(train, target, quant_vars):
 def plot_violin_grid_with_color(train, target, cat_vars, quant_vars):
     cols = len(cat_vars)
     for quant in quant_vars:
-        _, ax = plt.subplots(nrows=1, ncols=cols, figsize=(16, 4), sharey=True)
+        #_, ax = plt.subplots(nrows=1, ncols=cols, figsize=(16, 4), sharey=True)
+        _, ax = plt.subplots(nrows=2, ncols=int(cols/2), figsize=(16, 4), sharey=True)
         for i, cat in enumerate(cat_vars):
             sns.violinplot(x=cat, y=quant, data=train, split=True, 
                            ax=ax[i], hue=target, palette="Set2")
@@ -225,16 +226,19 @@ def plot_violin_grid_with_color(train, target, cat_vars, quant_vars):
             ax[i].set_ylabel(quant)
             ax[i].set_title(cat)
         plt.show()
+        #plt.xticks(rotation = 90) # Rotates X-Axis Ticks by 90-degrees, I added this
         # plt.tight_layout() # I added this
 
 def plot_swarm_grid_with_color(train, target, cat_vars, quant_vars):
     cols = len(cat_vars)
     for quant in quant_vars:
-        _, ax = plt.subplots(nrows=1, ncols=cols, figsize=(16, 4), sharey=True)
+        #_, ax = plt.subplots(nrows=1, ncols=cols, figsize=(16, 4), sharey=True)
+        _, ax = plt.subplots(nrows=2, ncols=int(cols/2), figsize=(16, 4), sharey=True)
         for i, cat in enumerate(cat_vars):
             sns.swarmplot(x=cat, y=quant, data=train, ax=ax[i], hue=target, palette="Set2")
             ax[i].set_xlabel('')
             ax[i].set_ylabel(quant)
             ax[i].set_title(cat)
         plt.show()
+        #p = plt.xticks(rotation = 90) # Rotates X-Axis Ticks by 90-degrees, I added this
         # plt.tight_layout() # I added this
