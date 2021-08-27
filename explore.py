@@ -68,7 +68,7 @@ def explore_univariate_categorical(train, cat_var):
     sns.barplot(x=cat_var, y='Count', data=frequency_table, color='lightseagreen')
     plt.title(cat_var)
     # plt.tight_layout() # I added this
-    plt.xticks(rotation = 90) # Rotates X-Axis Ticks by 45-degrees, I added this
+    plt.xticks(rotation = 90) # Rotates X-Axis Ticks by 90-degrees, I added this
     plt.show()
     print(frequency_table)
 
@@ -125,8 +125,9 @@ def explore_bivariate_categorical(train, target, cat_var):
     p = plot_cat_by_target(train, target, cat_var)
 
     print(chi2_summary)
-    print("\nobserved:\n", ct)
-    print("\nexpected:\n", expected)
+    print("\n")
+#     print("\nobserved:\n", ct)
+#     print("\nexpected:\n", expected)
     plt.show(p)
     print("\n_____________________\n")
 
@@ -159,12 +160,14 @@ def run_chi2(train, cat_var, target):
                                  'degrees of freedom': [degf]})
     expected = pd.DataFrame(expected)
     return chi2_summary, observed, expected
+    return chi2_summary, observed, expected
 
 def plot_cat_by_target(train, target, cat_var):
     p = plt.figure(figsize=(2,2))
     p = sns.barplot(cat_var, target, data=train, alpha=.8, color='lightseagreen')
     overall_rate = train[target].mean()
     p = plt.axhline(overall_rate, ls='--', color='gray')
+    p = plt.xticks(rotation = 90) # Rotates X-Axis Ticks by 90-degrees, I added this
     # p = plt.tight_layout() # I added this
     return p
 
