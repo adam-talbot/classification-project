@@ -11,11 +11,6 @@ def clean_telco(df):
     df.replace(to_replace='No phone service', value='No', inplace=True)
     return df
 
-# def final_clean(df):
-#     df.replace(to_replace='No internet service', value='No', inplace=True)
-#     df.replace(to_replace='No phone service', value='No', inplace=True)
-#     return df
-
 def split_telco(df):
     # Do initial 80/20 split to get train_validate and test splits
     train_validate, test = train_test_split(df, test_size=.2, random_state=123, stratify=df.churn)
