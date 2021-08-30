@@ -3,10 +3,10 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 def clean_telco(df):
-   '''
-   This function takes in a df, drops unnecessary columns, cleans and changes data type for total_charges column, 
-   renames categories for senior_citizen column, and removes redundant categories from 7 others columns
-   '''
+    '''
+    This function takes in a df, drops unnecessary columns, cleans and changes data type for total_charges column, 
+    renames categories for senior_citizen column, and removes redundant categories from 7 others columns
+    '''
     df.drop(columns = ['payment_type_id', 'contract_type_id', 'internet_service_type_id', 'customer_id'], inplace=True)
     df.total_charges.replace(to_replace={' ' : '0'}, inplace = True)
     df.total_charges = df.total_charges.astype('float')
