@@ -79,41 +79,41 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > - alpha = .05
 
 > Null Hypotheses:
-> 1. H_0: Churn is independent of gender
-> 2. H_0: Churn is independent of senior_citizen
-> 3. H_0: Churn is independent of partner
-> 4. H_0: Churn is independent of dependents
-> 5. H_0: Churn is independent of phone_service
-> 6. H_0: Churn is independent of multiple_lines
-> 7. H_0: Churn is independent of online_security
-> 8. H_0: Churn is independent of online_backup
-> 9. H_0: Churn is independent of device_protection
-> 10. H_0: Churn is independent of tech_support
-> 11. H_0: Churn is independent of streaming_tv
-> 12. H_0: Churn is independent of streaming_movies
-> 13. H_0: Churn is independent of paperless_billing
-> 14. H_0: Churn is independent of internet_service_type
-> 15. H_0: Churn is independent of contract_type
-> 16. H_0: Churn is independent of payment_type
+> 1. ${H}_{0}$: `Churn` is independent of `gender`
+> 2. H_0: `Churn` is independent of `senior_citizen`
+> 3. H_0: `Churn` is independent of `partner`
+> 4. H_0: `Churn` is independent of `dependents`
+> 5. H_0: `Churn` is independent of `phone_service`
+> 6. H_0: `Churn` is independent of `multiple_lines`
+> 7. H_0: `Churn` is independent of `online_security`
+> 8. H_0: `Churn` is independent of `online_backup`
+> 9. H_0: `Churn` is independent of `device_protection`
+> 10. H_0: `Churn` is independent of `tech_support`
+> 11. H_0: `Churn` is independent of `streaming_tv`
+> 12. H_0: `Churn` is independent of `streaming_movies`
+> 13. H_0: `Churn` is independent of `paperless_billing`
+> 14. H_0: `Churn` is independent of `internet_service_type`
+> 15. H_0: `Churn` is independent of `contract_type`
+> 16. H_0: `Churn` is independent of `payment_type`
 
 > Alternative Hypotheses:
-> 1. H_0: Churn is not independent of gender
-> 2. H_0: Churn is not independent of senior_citizen
-> 3. H_0: Churn is not independent of partner
-> 4. H_0: Churn is not independent of dependents
-> 5. H_0: Churn is not independent of phone_service
-> 6. H_0: Churn is not independent of multiple_lines
-> 7. H_0: Churn is not independent of online_security
-> 8. H_0: Churn is not independent of online_backup
-> 9. H_0: Churn is not independent of device_protection
-> 10. H_0: Churn is not independent of tech_support
-> 11. H_0: Churn is not independent of streaming_tv
-> 12. H_0: Churn is not independent of streaming_movies
-> 13. H_0: Churn is not independent of paperless_billing
-> 14. H_0: Churn is not independent of internet_service_type
-> 15. H_0: Churn is not independent of contract_type
-> 16. H_0: Churn is not independent of payment_type
-
+> 1. H_0: `Churn` is not independent of `gender`
+> 2. H_0: `Churn` is not independent of `senior_citizen`
+> 3. H_0: `Churn` is not independent of `partner`
+> 4. H_0: `Churn` is not independent of `dependents`
+> 5. H_0: `Churn` is not independent of `phone_service`
+> 6. H_0: `Churn` is not independent of `multiple_lines`
+> 7. H_0: `Churn` is not independent of `online_security`
+> 8. H_0: `Churn` is not independent of `online_backup`
+> 9. H_0: `Churn` is not independent of `device_protection`
+> 10. H_0: `Churn` is not independent of `tech_support`
+> 11. H_0: `Churn` is not independent of `streaming_tv`
+> 12. H_0: `Churn` is not independent of `streaming_movies`
+> 13. H_0: `Churn` is not independent of `paperless_billing`
+> 14. H_0: `Churn` is not independent of `internet_service_type`
+> 15. H_0: `Churn` is not independent of `contract_type`
+> 16. H_0: `Churn` is not independent of `payment_type`
+`
 > **Conclusions:**
 > 1. We **fail to reject the null**, evidence suggests that `gender` is independent of `churn`
 > 2. We **reject the null**, evidence suggests that `senior_citizen` is not independent of `churn`
@@ -137,14 +137,14 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > - alpha = .05
 
 > Null Hypotheses:
-> 1. H_0: Mean tenure values are equal for churn subgroups
-> 2. H_0: Mean monthly_charges values are equal for churn subgroups
-> 3. H_0: Mean total_charges values are equal for churn subgroups
+> 1. H_0: Mean `tenure values` are equal for `churn` subgroups
+> 2. H_0: Mean `monthly_charges` values are equal for `churn` subgroups
+> 3. H_0: Mean `total_charges` values are equal for `churn` subgroups
 
 > Alternative Hypotheses:
-> 1. H_a: Mean tenure values are not equal for churn subgroups
-> 2. H_a: Mean monthly_charges values are not equal for churn subgroups
-> 3. H_a: Mean total_charges values are not equal for churn subgroups
+> 1. H_a: Mean `tenure values` are not equal for `churn` subgroups
+> 2. H_a: Mean `monthly_charges` values are not equal for `churn` subgroups
+> 3. H_a: Mean `total_charges` values are not equal for `churn` subgroups
 
 > **Conclusions:**
 > 1. We **reject the null**, evidence suggests that mean `tenure` values are different for `churn` subgroups
