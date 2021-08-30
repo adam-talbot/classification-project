@@ -172,7 +172,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-##### Plan
+##### **Plan**
 - [x] Create README.md with data dictionary, project and business goals, come up with initial hypotheses.
 - [x] Acquire data from the Codeup Database and create a function to automate this process. Save the function in an acquire.py file to import into the Final Report Notebook.
 - [x] Clean and prepare data for the first iteration through the pipeline, MVP preparation. Create a function to automate the process, store the function in a prepare.py module, and prepare data in Final Report Notebook by importing and using the funtion.
@@ -186,32 +186,31 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 
 ___
 
-##### Plan -> Acquire
+##### Plan -> **Acquire**
 > - Store functions that are needed to acquire Telco data from the database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
 > - The final function will return a pandas DataFrame.
 > - Import the acquire function from the acquire.py module and use it to acquire the data in the Final Report Notebook.
 > - Complete some initial data summarization (`.info()`, `.describe()`, `.value_counts()`, ...).
 ___
 
-##### Plan -> Acquire -> Prepare
-> - Store functions needed to prepare the iris data; make sure the module contains the necessary imports to run the code. The final function should do the following:
+##### Plan -> Acquire -> **Prepare**
+> - Store functions needed to prepare the Telco data; make sure the module contains the necessary imports to run the code. The final function should do the following:
 >> - Split the data into train/validate/test.
 >> - Handle any missing values.
 >> - Handle erroneous data and/or outliers that need addressing.
 >> - Encode variables as needed.
->> - Create any new features, if made for this project.
->> - Plot distributions of individual variables.
 > - Import the prepare function from the prepare.py module and use it to prepare the data in the Final Report Notebook.
+> - Plot distributions of individual variables.
 ___
 
-##### Plan -> Acquire -> Prepare -> Explore
+##### Plan -> Acquire -> Prepare -> **Explore**
 > - Answer key questions, my hypotheses, and figure out the features that can be used in a classification model to best predict the target variable, churn. 
 > - Run at least 2 statistical tests in data exploration. Document my hypotheses, set an alpha before running the tests, and document the findings well.
 > - Create visualizations and run statistical tests that work toward discovering variable relationships (independent with independent and independent with dependent). The goal is to identify features that are related to species (the target), identify any data integrity issues, and understand 'how the data works'. If there appears to be some sort of interaction or correlation, assume there is no causal relationship and brainstorm (and document) ideas on reasons there could be correlation.
 > - Summarize my conclusions, provide clear answers to my specific questions, and summarize any takeaways/action plan from the work above.
 ___
 
-##### Plan -> Acquire -> Prepare -> Explore -> Model
+##### Plan -> Acquire -> Prepare -> Explore -> **Model**
 > - Establish a baseline accuracy to determine if having a model is better than no model and train and compare at least 3 different models. Document these steps well.
 > - Train (fit, transform, evaluate) multiple models, varying the algorithm and/or hyperparameters you use.
 > - Compare evaluation metrics across all the models you train and select the ones you want to evaluate using your validate dataframe.
@@ -220,9 +219,9 @@ ___
 > - Test the final model on the out-of-sample data (the testing dataset), summarize the performance, interpret and document the results.
 ___
 
-##### Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+##### Plan -> Acquire -> Prepare -> Explore -> Model -> **Deliver**
 > - Introduce myself and my project goals at the very beginning of my notebook walkthrough.
-> - Summarize my findings at the beginning like I would for an Executive Summary. (Don't throw everything out that I learned from Storytelling) .
+> - Summarize my findings at the beginning like I would for an Executive Summary.
 > - Walk Codeup Data Science Team through the analysis I did to answer my questions and that lead to my findings. (Visualize relationships and Document takeaways.) 
 > - Clearly call out the questions and answers I am analyzing as well as offer insights and recommendations based on my findings.
 > - Finish with key takeaways, recommendations, and next steps and be prepared to answer questions from the data science team about your project.
