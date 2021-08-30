@@ -79,7 +79,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > - alpha = .05
 
 > Null Hypotheses:
-> 1. ${H}_{0}$: `Churn` is independent of `gender`
+> 1. H_0: `Churn` is independent of `gender`
 > 2. H_0: `Churn` is independent of `senior_citizen`
 > 3. H_0: `Churn` is independent of `partner`
 > 4. H_0: `Churn` is independent of `dependents`
@@ -157,9 +157,13 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-> - I found that all of the classification models I created, LogisticRegression, DecisionTree, RandomForest, and KNeighbors predicted the species of Iris equally well using the features `sepal_width`, `sepal_length`, `petal_length`, `petal_width`.
-> - I chose my DecisionTree model as my best model with a 90% accuracy rate for predicting my target value, species. This model outperformed my baseline score of 33% accuracy, so it has value.
-> - Some initial exploration and statistical testing revealed that engineering some new features like petal area or sepal area might help my models predict with even more accuracy, and with more time, I would like to test this hypothesis.
+> **Conclusions:**
+> - I found that my KNN Classification model best predicted churn when evaluated using accuracy and defining overfit as a >5% decrease in accuracy from train to validate evaluation
+> - This model outperformed the baseline by 4.4%, so it has value.
+> **Next Steps:**
+> - Some initial exploration and statistical testing revealed that engineering some new features might help my models predict with even more accuracy, and with more time, I would like to test this hypothesis.
+> - Scaling numeric columns would likely improve performance for the KNN model. I would implement this with more time.
+> - Because of the imbalance of classes for the target variable, sampling methods might also improve model peformance. I would implement this with more time. 
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
@@ -171,7 +175,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 - [x] Create README.md with data dictionary, project and business goals, come up with initial hypotheses.
 - [x] Acquire data from the Codeup Database and create a function to automate this process. Save the function in an acquire.py file to import into the Final Report Notebook.
 - [x] Clean and prepare data for the first iteration through the pipeline, MVP preparation. Create a function to automate the process, store the function in a prepare.py module, and prepare data in Final Report Notebook by importing and using the funtion.
-- [x] Clearly define two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, and document findings and takeaways.
+- [x] Clearly define at least two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, and document findings and takeaways.
 - [x] Establish a baseline accuracy and document well.
 - [x] Train three different classification models.
 - [x] Evaluate models on train and validate datasets.
@@ -182,11 +186,10 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 ___
 
 ##### Plan -> Acquire
-> - Store functions that are needed to acquire data from the measures and species tables from the iris database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
+> - Store functions that are needed to acquire Telco data from the database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
 > - The final function will return a pandas DataFrame.
 > - Import the acquire function from the acquire.py module and use it to acquire the data in the Final Report Notebook.
 > - Complete some initial data summarization (`.info()`, `.describe()`, `.value_counts()`, ...).
-> - Plot distributions of individual variables.
 ___
 
 ##### Plan -> Acquire -> Prepare
@@ -196,6 +199,7 @@ ___
 >> - Handle erroneous data and/or outliers that need addressing.
 >> - Encode variables as needed.
 >> - Create any new features, if made for this project.
+>> - Plot distributions of individual variables.
 > - Import the prepare function from the prepare.py module and use it to prepare the data in the Final Report Notebook.
 ___
 
@@ -230,6 +234,6 @@ ___
 
 You will need your own env file with database credentials along with all the necessary files listed below to run my final project notebook. 
 - [x] Read this README.md
-- [ ] Download the aquire.py, prepare.py, and final_report.ipynb files into your working directory
+- [ ] Download the aquire.py, prepare.py, explore.py, and final_report.ipynb files into your working directory
 - [ ] Add your own env file to your directory. (user, password, host)
 - [ ] Run the final_report.ipynb notebook
