@@ -172,7 +172,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-##### **Plan**
+##### ***Plan***
 - [x] Create README.md with data dictionary, project and business goals, come up with initial hypotheses.
 - [x] Acquire data from the Codeup Database and create a function to automate this process. Save the function in an acquire.py file to import into the Final Report Notebook.
 - [x] Clean and prepare data for the first iteration through the pipeline, MVP preparation. Create a function to automate the process, store the function in a prepare.py module, and prepare data in Final Report Notebook by importing and using the funtion.
