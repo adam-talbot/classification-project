@@ -113,7 +113,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > 14. H_0: `Churn` is not independent of `internet_service_type`
 > 15. H_0: `Churn` is not independent of `contract_type`
 > 16. H_0: `Churn` is not independent of `payment_type`
-`
+
 > **Conclusions:**
 > 1. We **fail to reject the null**, evidence suggests that `gender` is independent of `churn`
 > 2. We **reject the null**, evidence suggests that `senior_citizen` is not independent of `churn`
