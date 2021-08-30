@@ -29,6 +29,9 @@ def train_validate_test_split(df, target, seed=123):
 
 
 def explore_univariate(train, cat_vars, quant_vars):
+    '''
+    Performs univariate exploration for categorical and quantitative variables in dataset
+    '''
     for var in cat_vars:
         explore_univariate_categorical(train, var)
         print('_________________________________________________________________')
@@ -38,6 +41,9 @@ def explore_univariate(train, cat_vars, quant_vars):
         print(descriptive_stats)
 
 def explore_bivariate(train, target, cat_vars, quant_vars):
+    '''
+    Performs bivariate exploration for categorical and quantitative variables in dataset
+    '''
     for cat in cat_vars:
         explore_bivariate_categorical(train, target, cat)
     for quant in quant_vars:
@@ -45,6 +51,7 @@ def explore_bivariate(train, target, cat_vars, quant_vars):
 
 def explore_multivariate(train, target, cat_vars, quant_vars):
     '''
+    Performs multivariate exploration for categorical and quantitative variables in dataset
     '''
     plot_swarm_grid_with_color(train, target, cat_vars, quant_vars)
     plt.show()
