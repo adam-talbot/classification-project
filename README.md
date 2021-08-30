@@ -10,15 +10,15 @@
 
 #### Project Objectives
 > - Document code, process (data acquistion, preparation, exploratory data analysis and statistical testing, modeling, and model evaluation), findings, and key takeaways in a Jupyter Notebook report
-> - Create modules (acquire.py, prepare.py) that make your process repeateable
+> - Create modules (acquire.py, prepare.py) that make my process repeateable
 > - Construct a model to predict customer churn using classification techniques
-> - Deliver a 5 minute presentation consisting of a high-level notebook walkthrough using your Jupyter Notebook from above; your presentation should be appropriate for your target audience
+> - Deliver a 5-minute, audience-appropriate presentation consisting of a high-level notebook walkthrough using your Jupyter Notebook from above
 > - Answer panel questions about your code, process, findings and key takeaways, and model
 
 #### Business Goals
 > - Find drivers for customer churn at Telco
 > - Construct a ML classification model that accurately predicts customer churn
-> - Document your process well enough to be presented or read like a report
+> - Document process well enough to be presented or read like a report
 
 #### Audience
 > - The Codeup Data Science team
@@ -37,31 +37,31 @@
 #### Data Dictionary
 
 ---
-| Attribute | Definition | Data Type |
-| ----- | ----- | ----- |
-|payment\_type\_id |How a customer pays their bill each month | int64 |
-|contract\_type\_id|Which contract type a customer has | int64 |
-|internet\_service\_type_id|Type of internet service a customer has | int64 |
-|customer\_id|Alpha-numeric ID that identifies each customer| object |
-gender|Gender of the customer| object |
-senior_citizen|If customer is 65 or older| int64 |
-partner|If customer is married| object | 
-dependents|If a customer lives with dependents| object |
-tenure|The length of a customers relationship with Telco™ measured in months|  int64 |
-phone_service|If a customer has phone service| object |
-multiple_lines|If a customer has multiple phone lines| object |
-online_security|If a customer has online security add-on| object |
-online_backup|If a customer has online backups add-on| object |
-device_protection|If a customer has a protection plan for Telco™ devices| object |
-tech_support|Whether a customer has technical support add-on| object |
-streaming_tv|If a customer uses internet to stream tv| object |
-streaming_movies|If a customer uses internet to stream movies| object |
-paperless_billing|If a customer is enrolled in paperless billing| object |
-monthly_charges|The amount a customer pays each month| object |
-total_charges|The total amount a customer has paid for Telco™ services| object |
-|internet\_service\_type|Type of internet service a customer has| object |
-|contract_type|The type of contract a customer has| object |
-|payment_type|How a customer pays their bill| object |
+| Attribute | Definition | Data Type | Notes |
+| ----- | ----- | ----- | ----- |
+|payment\_type\_id |How a customer pays their bill each month | int64 | Dropped for modeling |
+|contract\_type\_id|Which contract type a customer has | int64 | Dropped for modeling |
+|internet\_service\_type_id|Type of internet service a customer has | int64 | Dropped for modeling |
+|customer\_id|Alpha-numeric ID that identifies each customer| object | Dropped for modeling |
+gender|Gender of the customer| object | Dropped for modeling, statistical testing showed independence from target |
+senior_citizen|If customer is 65 or older| int64 | Used in model |
+partner|If customer is married| object | Used in model |
+dependents|If a customer lives with dependents| object | Used in model |
+tenure|The length of a customers relationship with Telco™ measured in months|  int64 | Used in model |
+phone_service|If a customer has phone service| object | Dropped for modeling, statistical testing showed independence from target |
+multiple_lines|If a customer has multiple phone lines| object | Used in model, one category removed to reduce redundancy |
+online_security|If a customer has online security add-on| object | Used in model, one category removed to reduce redundancy |
+online_backup|If a customer has online backups add-on| object | Used in model, one category removed to reduce redundancy |
+device_protection|If a customer has a protection plan for Telco™ devices| object | Used in model, one category removed to reduce redundancy |
+tech_support|Whether a customer has technical support add-on| object | Used in model, one category removed to reduce redundancy |
+streaming_tv|If a customer uses internet to stream tv| object | Used in model, one category removed to reduce redundancy |
+streaming_movies|If a customer uses internet to stream movies| object | Used in model, one category removed to reduce redundancy |
+paperless_billing|If a customer is enrolled in paperless billing| object | Used in model |
+monthly_charges|The amount a customer pays each month| object | Used in model |
+total_charges|The total amount a customer has paid for Telco™ services| object | Used in model, data type changed to float |
+|internet\_service\_type|Type of internet service a customer has| object | Used in model |
+|contract_type|The type of contract a customer has| object | Used in model |
+|payment_type|How a customer pays their bill| object | Used in model |
 
 | Target | Definition | Data Type |
 | ----- | ----- | ----- |
