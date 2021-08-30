@@ -1,7 +1,7 @@
 # ideas to improve
 # add plt.tight_layout() where necessary to make sure axis labels don't overlap
 # Make it work on datasets with datasets with only one categorical variable
-# Make it work on datasets with a tr
+# Make it work on datasets with a target that has more than 2 classes and has value other than 1 or 0
 
 import pandas as pd
 import numpy as np
