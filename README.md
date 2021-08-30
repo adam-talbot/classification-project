@@ -63,30 +63,93 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 |contract_type|The type of contract a customer has| object | Used in model |
 |payment_type|How a customer pays their bill| object | Used in model |
 
-| Target | Definition | Data Type |
-| ----- | ----- | ----- |
-|churn|Indicates whether a customer has terminated service| object |
+| Target | Definition | Data Type | Notes |
+| ----- | ----- | ----- | ----- |
+|churn|Indicates whether a customer has terminated service| object | For exploration and modeling, 1=churn and 0=not_churn |
 
 #### Initial, Informal Hypotheses
-> - Customers are more likely to churn within first 12 months of tenure
-> - Customers that pay via manual payment methods are more likely to churn
-> - Month-to-month customers will have highest churn rate
-> - Fiber customers are more likely to churn that other those with other internet types
-> - Customers with more than one phone line will be more likely to churn 
+> - Some categorical variables will be related to the target (I can test this with the Chi-Square Test)
+>> - Those that are related should be used in model, those that aren't, shouldn't be used
+> - Some quantitative variables will be related to the target (I can test this with the Mann-Whitney Test)
+>> - Those that are related should be used in model, those that aren't, shouldn't be used
 
 #### Formal Hypotheses
 
->  **Hypothesis 1 -**
+>  **Hypotheses (Categorical Variables):**
 > - alpha = .05
-> - $H_0$: Sepal length is the same in virginica and versicolor. $\mu_{virginica} == \mu_{versicolor}$.  
-> - $H_a$: Sepal length significantly different in virginica and versicolor. $\mu_{virginica} != \mu_{versicolor}$. 
-> - Outcome: I rejected the Null Hypothesis; there is a difference in sepal length between the Virginica and Vericolor Species.
 
->  **Hypothesis 2 -** 
+> Null Hypotheses:
+> 1. H_0: Churn is independent of gender
+> 2. H_0: Churn is independent of senior_citizen
+> 3. H_0: Churn is independent of partner
+> 4. H_0: Churn is independent of dependents
+> 5. H_0: Churn is independent of phone_service
+> 6. H_0: Churn is independent of multiple_lines
+> 7. H_0: Churn is independent of online_security
+> 8. H_0: Churn is independent of online_backup
+> 9. H_0: Churn is independent of device_protection
+> 10. H_0: Churn is independent of tech_support
+> 11. H_0: Churn is independent of streaming_tv
+> 12. H_0: Churn is independent of streaming_movies
+> 13. H_0: Churn is independent of paperless_billing
+> 14. H_0: Churn is independent of internet_service_type
+> 15. H_0: Churn is independent of contract_type
+> 16. H_0: Churn is independent of payment_type
+
+> Alternative Hypotheses:
+> 1. H_0: Churn is not independent of gender
+> 2. H_0: Churn is not independent of senior_citizen
+> 3. H_0: Churn is not independent of partner
+> 4. H_0: Churn is not independent of dependents
+> 5. H_0: Churn is not independent of phone_service
+> 6. H_0: Churn is not independent of multiple_lines
+> 7. H_0: Churn is not independent of online_security
+> 8. H_0: Churn is not independent of online_backup
+> 9. H_0: Churn is not independent of device_protection
+> 10. H_0: Churn is not independent of tech_support
+> 11. H_0: Churn is not independent of streaming_tv
+> 12. H_0: Churn is not independent of streaming_movies
+> 13. H_0: Churn is not independent of paperless_billing
+> 14. H_0: Churn is not independent of internet_service_type
+> 15. H_0: Churn is not independent of contract_type
+> 16. H_0: Churn is not independent of payment_type
+
+> **Conclusions:**
+> 1. We **fail to reject the null**, evidence suggests that `gender` is independent of `churn`
+> 2. We **reject the null**, evidence suggests that `senior_citizen` is not independent of `churn`
+> 3. We **reject the null**, evidence suggests that `partner` is not independent of `churn`
+> 4. We **reject the null**, evidence suggests that `dependents` is not independent of `churn`
+> 5. We **fail to reject the null**, evidence suggests that `phone_service` is independent of `churn`
+> 6. We **reject the null**, evidence suggests that `multiple_lines` is not independent of `churn`
+> 7. We **reject the null**, evidence suggests that `online_security` is not independent of `churn`
+> 8. We **reject the null**, evidence suggests that `online_backup` is not independent of `churn`
+> 9. We **reject the null**, evidence suggests that `device_protection` is not independent of `churn`
+> 10. We **reject the null**, evidence suggests that `tech_support` is not independent of `churn`
+> 11. We **reject the null**, evidence suggests that `streaming_tv` is not independent of `churn`
+> 12. We **reject the null**, evidence suggests that `streaming_movies` is not independent of `churn`
+> 13. We **reject the null**, evidence suggests that `paperless_billing` is not independent of `churn`
+> 14. We **reject the null**, evidence suggests that `internet_service_type` is not independent of `churn`
+> 15. We **reject the null**, evidence suggests that `contract_type` is not independent of `churn`
+> 16. We **reject the null**, evidence suggests that `payment_type` is not independent of `churn`
+
+
+>  **Hypotheses (Quantitative Variables):** 
 > - alpha = .05
-> - $H_0$: Sepal width is the same in virginica and versicolor. $\mu_{virginica} == \mu_{versicolor}$.  
-> - $H_a$: Sepal width significantly different in virginica and versicolor. $\mu_{virginica} != \mu_{versicolor}$. 
-> - Outcome: I rejected the Null Hypothesis; there is a difference in sepal width between the Virginica and Versicolor Species.
+
+> Null Hypotheses:
+> 1. H_0: Mean tenure values are equal for churn subgroups
+> 2. H_0: Mean monthly_charges values are equal for churn subgroups
+> 3. H_0: Mean total_charges values are equal for churn subgroups
+
+> Alternative Hypotheses:
+> 1. H_a: Mean tenure values are not equal for churn subgroups
+> 2. H_a: Mean monthly_charges values are not equal for churn subgroups
+> 3. H_a: Mean total_charges values are not equal for churn subgroups
+
+> **Conclusions:**
+> 1. We **reject the null**, evidence suggests that mean `tenure` values are different for `churn` subgroups
+> 2. We **reject the null**, evidence suggests that mean `monthly_charges` values are different for `churn` subgroups
+> 3. We **reject the null**, evidence suggests that mean `total_charges` values are different for `churn` subgroups
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
