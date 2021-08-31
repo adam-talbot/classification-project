@@ -1,3 +1,4 @@
+#### THIS MODULE WAS TAKEN FROM THE CODEUP CURRICULUM AND MODIFIED FOR MY USE IN THIS PROJECT ####
 # ideas to improve
 # add plt.tight_layout() where necessary to make sure axis labels don't overlap
 # Make it work on datasets with datasets with only one categorical variable
@@ -151,7 +152,7 @@ def explore_bivariate_quant(train, target, quant_var):
     mann_whitney = compare_means(train, target, quant_var)
     plt.figure(figsize=(4,4))
     boxen = plot_boxen(train, target, quant_var)
-    swarm = plot_swarm(train, target, quant_var)
+    # swarm = plot_swarm(train, target, quant_var)
     plt.show()
     # plt.tight_layout() # I added this
     print(descriptive_stats, "\n")
