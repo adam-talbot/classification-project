@@ -3,7 +3,7 @@ import numpy as np
 import os
 from env import host, user, password
 
-###################### Acquire Telco Data ######################
+##################### Acquire Telco Data #####################
 
 def get_connection(db, user=user, host=host, password=password):
     '''
