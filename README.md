@@ -159,6 +159,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 
 > **Conclusions:**
 > - I found that my KNN Classification model best predicted churn when evaluated using accuracy and defining overfit as a >5% decrease in accuracy from train to validate evaluation
+>> - 78% out-of-sample accuracy
 > - This model outperformed the baseline by 4.4%, so it has value.
 
 > **Next Steps:**
