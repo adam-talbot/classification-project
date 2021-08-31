@@ -166,6 +166,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > - Some initial exploration and statistical testing revealed that engineering some new features might help my models predict with even more accuracy, and with more time, I would like to test this hypothesis.
 > - Scaling numeric columns would likely improve performance for the KNN model. I would implement this with more time.
 > - Because of the imbalance of classes for the target variable, sampling methods might also improve model peformance. I would implement this with more time. 
+> - I would explore further hyperparameter tuning with more time.
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
