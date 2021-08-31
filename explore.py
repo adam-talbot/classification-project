@@ -91,6 +91,8 @@ def explore_univariate_quant(train, quant_var):
     p = plt.subplot(1, 2, 1)
     p = plt.hist(train[quant_var], color='lightseagreen')
     p = plt.title(quant_var)
+    p = plt.xlabel(quant_var)
+    p = plt.ylabel('Count')
     # p = plt.tight_layout() # I added this
 
     # second plot: box plot
