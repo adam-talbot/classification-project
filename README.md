@@ -97,22 +97,22 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > 16. H_0: `Churn` is independent of `payment_type`
 
 > Alternative Hypotheses:
-> 1. H_a Churn is not independent of gender
-> 2. H_a Churn is not independent of senior_citizen
-> 3. H_a Churn is not independent of partner
-> 4. H_a Churn is not independent of dependents
-> 5. H_a Churn is not independent of phone_service
-> 6. H_a Churn is not independent of multiple_lines
-> 7. H_a Churn is not independent of online_security
-> 8. H_a Churn is not independent of online_backup
-> 9. H_a Churn is not independent of device_protection
-> 10. H_a Churn is not independent of tech_support
-> 11. H_a Churn is not independent of streaming_tv
-> 12. H_a Churn is not independent of streaming_movies
-> 13. H_a Churn is not independent of paperless_billing
-> 14. H_a Churn is not independent of internet_service_type
-> 15. H_a Churn is not independent of contract_type
-> 16. H_a Churn is not independent of payment_type
+> 1. H_a: `Churn` is not independent of `gender`
+> 2. H_a: `Churn` is not independent of `senior_citizen`
+> 3. H_a: `Churn` is not independent of `partner`
+> 4. H_a: `Churn` is not independent of `dependents`
+> 5. H_a: `Churn` is not independent of `phone_service`
+> 6. H_a: `Churn` is not independent of `multiple_lines`
+> 7. H_a: `Churn` is not independent of `online_security`
+> 8. H_a: `Churn` is not independent of `online_backup`
+> 9. H_a: `Churn` is not independent of `device_protection`
+> 10. H_a: Churn` is not independent of `tech_support`
+> 11. H_a: `Churn` is not independent of `streaming_tv`
+> 12. H_a: `Churn` is not independent of `streaming_movies`
+> 13. H_a: `Churn` is not independent of `paperless_billing`
+> 14. H_a: `Churn` is not independent of `internet_service_type`
+> 15. H_a: `Churn` is not independent of `contract_type`
+> 16. H_a: `Churn` is not independent of `payment_type`
 
 > **Conclusions:**
 > 1. We **fail to reject the null**, evidence suggests that `gender` is independent of `churn`
