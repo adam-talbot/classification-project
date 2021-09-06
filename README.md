@@ -106,7 +106,7 @@ total_charges|The total amount a customer has paid for Telco™ services| object
 > 7. H_a: `Churn` is not independent of `online_security`
 > 8. H_a: `Churn` is not independent of `online_backup`
 > 9. H_a: `Churn` is not independent of `device_protection`
-> 10. H_a: Churn` is not independent of `tech_support`
+> 10. H_a: `Churn` is not independent of `tech_support`
 > 11. H_a: `Churn` is not independent of `streaming_tv`
 > 12. H_a: `Churn` is not independent of `streaming_movies`
 > 13. H_a: `Churn` is not independent of `paperless_billing`
